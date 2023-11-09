@@ -6,7 +6,7 @@ public class Humain {
 	protected int argentQty;
 
 	public Humain(String nom, String boissonPref, int argentQty) {
-		
+
 		this.nom = nom;
 		this.boissonPref = boissonPref;
 		this.argentQty = argentQty;
@@ -21,7 +21,7 @@ public class Humain {
 	}
 
 	public void parler(String texte) {
-		System.out.println("(" + getNom() + ") - "+ texte +"."  );
+		System.out.println("(" + getNom() + ") - " + texte + ".");
 
 	}
 
@@ -35,10 +35,11 @@ public class Humain {
 
 	public String acheter(String bien, int prix) {
 		if (argentQty < prix) {
-			parler("j'en ai que "+ getArgentQty() + " sous en poche, je vais pas pouvoire m'offrir un "+ bien + " a " + prix);
+			parler("j'en ai que " + getArgentQty() + " sous en poche, je vais pas pouvoire m'offrir un " + bien + " a "
+					+ prix);
 			return "";
 		} else {
-			parler("J'ai " + getArgentQty() + " sous en poche je vais pouvoire m'offrir un "+ bien +" a " + prix);
+			parler("J'ai " + getArgentQty() + " sous en poche je vais pouvoire m'offrir un " + bien + " a " + prix);
 			perdreArgent(prix);
 			return bien;
 		}
