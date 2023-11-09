@@ -1,12 +1,12 @@
 package personnages;
 
 public class Humain {
-	private String nom;
-	private String boissonPref;
-	private int argentQty;
+	protected String nom;
+	protected String boissonPref;
+	protected int argentQty;
 
 	public Humain(String nom, String boissonPref, int argentQty) {
-		super();
+		
 		this.nom = nom;
 		this.boissonPref = boissonPref;
 		this.argentQty = argentQty;
@@ -26,7 +26,7 @@ public class Humain {
 	}
 
 	public void direBonjour() {
-		parler("Bonjour ! Je m’appelle " + getNom() + "et j’aime boire du " + boissonPref);
+		parler("Bonjour ! Je m’appelle " + getNom() + " et j’aime boire du " + boissonPref);
 	}
 
 	public void boire() {
